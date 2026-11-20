@@ -4,3 +4,5 @@ Disallow: /login
 Disallow: /api/
 
 Sitemap: https://idrees-typing-academy.pages.dev/sitemap.xml
+
+# Cloudflare Pages production deployment refresh
