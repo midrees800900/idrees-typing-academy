@@ -1,4 +1,6 @@
 import { json } from "../_lib/auth.js";
+
+// The shared API helpers live in functions/_lib, one directory above this file.
 export async function onRequestGet({ request, env }) {
   const id = new URL(request.url).searchParams.get("id");
   if (!id) return json({ error: "Certificate ID is required." }, 400);
