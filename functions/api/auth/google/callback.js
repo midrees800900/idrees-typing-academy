@@ -26,5 +26,5 @@ export async function onRequestGet({ request, env }) {
   const token = randomToken(32), tokenHash = await sha256(token);
   const expires = new Date(Date.now()+30*24*60*60*1000).toISOString();
   await env.DB.prepare("INSERT INTO sessions(token_hash,user_id,expires_at) VALUES(?,?,?)").bind(tokenHash,id,expires).run();
-  return new Response(null,{status:302,headers:{"location":"/?signed_in=1","set-cookie":[sessionCookie(token),clearState],"cache-control":"no-store"}});
+  return new Response(null,{status:302,headers:{"location":"/?signed_in=1","set-cookie":sessionCookie(token),"cache-control":"no-store"}});
 }
