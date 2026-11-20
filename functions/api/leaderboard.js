@@ -1,4 +1,6 @@
 import { json, allowedLanguages } from "../_lib/auth.js";
+
+// The shared API helpers live in functions/_lib, one directory above this file.
 export async function onRequestGet({ request, env }) {
   const language = new URL(request.url).searchParams.get("language") || "English";
   if (!allowedLanguages.includes(language)) return json({ error: "Unsupported language." }, 400);
