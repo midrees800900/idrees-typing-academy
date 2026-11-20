@@ -1,6 +1,6 @@
 import { randomToken, json } from "../../../_lib/auth.js";
 export async function onRequestGet({ request, env }) {
-  if (!env.GOOGLE_CLIENT_ID) return json({ error: "Google sign-in is not configured yet. The site owner must add the Google OAuth client ID in Cloudflare settings." }, 503);
+  if (!env.GOOGLE_CLIENT_ID) return new Response("<!doctype html><meta charset=\"utf-8\"><title>Sign-in setup needed</title><main style=\"font:16px system-ui;max-width:560px;margin:12vh auto;padding:24px\"><h1>Google sign-in is not connected yet</h1><p>The academy owner must finish the database and Google OAuth setup in Cloudflare before accounts can be used.</p><a href=\"/login.html\">Return to sign-in</a></main>", {status:503,headers:{"content-type":"text/html; charset=utf-8"}});
   const url = new URL(request.url);
   const state = randomToken(24);
   const redirectUri = url.origin + "/api/auth/google/callback";
