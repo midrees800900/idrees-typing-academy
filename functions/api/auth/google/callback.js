@@ -1,4 +1,4 @@
-import { json, randomToken, sha256, sessionCookie } from "../../../../_lib/auth.js";
+import { json, randomToken, sha256, sessionCookie } from "../../../_lib/auth.js";
 function readCookie(request, name) { const raw=request.headers.get("Cookie")||""; for(const p of raw.split(";")){const i=p.indexOf("=");if(i>0&&p.slice(0,i).trim()===name)return decodeURIComponent(p.slice(i+1).trim())}return null; }
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
