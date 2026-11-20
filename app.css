@@ -8,3 +8,12 @@
 .certificate-tiers{margin:22px 0;padding:18px 20px;background:#f8f6fc;border:1px solid #e9e1f1;border-radius:14px}
 .certificate-tiers h3{margin:0 0 10px;font-size:16px}
 .certificate-tiers ul{margin:0;padding-left:20px;display:grid;gap:7px;font-size:13px;line-height:1.55}
+
+/* Clear, compact test controls */
+.test-controls{align-items:end;flex-wrap:wrap}
+.test-controls label{flex:1 1 150px;min-width:135px}
+.test-controls .btn{margin-left:0;flex:0 0 auto}
+#difficulty{min-width:130px}
+.prompt{user-select:none}
+.test-panel textarea{transition:border-color .2s,box-shadow .2s}
+@media(max-width:600px){.test-controls label{flex:1 1 42%}.test-controls .btn{width:100%}}
