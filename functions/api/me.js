@@ -1,4 +1,4 @@
-import { getUser, json } from "./_lib/auth.js";
+import { getUser, json } from "../_lib/auth.js";
 export async function onRequestGet({ request, env }) {
   const user=await getUser(request,env); if(!user) return json({error:"Sign in to view saved progress."},401);
   const [stats,attempts,certificates,days]=await Promise.all([
