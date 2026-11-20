@@ -8,7 +8,7 @@ export async function onRequestPost({ request, env }) {
  const user=await getUser(request,env); if(!user) return json({error:"Sign in to save a test to your account. Guest practice remains available."},401);
  const body=await request.json().catch(()=>({}));const language=String(body.language||"English");const difficulty=String(body.difficulty||"Medium");const duration=Number(body.duration);
  if(!allowedLanguages.includes(language)||!["Easy","Medium","Hard"].includes(difficulty)||![60,180,300].includes(duration))return json({error:"Choose a supported language, difficulty and test duration."},400);
- const paragraphs=bank[language][difficulty];const prompt=[...paragraphs].sort(()=>Math.random()-.5).join(" ");const id=crypto.randomUUID();
+ const paragraphs=bank[language][difficulty];const target=Math.max(450,Math.min(2400,Math.round((duration/60)*450)));let selected=[],length=0,last="";while(length<target){const round=[...paragraphs];for(let i=round.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[round[i],round[j]]=[round[j],round[i]]}if(round.length>1&&round[0]===last)round.push(round.shift());for(const paragraph of round){selected.push(paragraph);length+=paragraph.length+1;last=paragraph;if(length>=target)break}}const prompt=selected.join(" ");const id=crypto.randomUUID();
  await env.DB.prepare("INSERT INTO challenges(id,user_id,language,prompt,duration_seconds) VALUES(?,?,?,?,?)").bind(id,user.id,language,prompt,duration).run();
  return json({id,prompt,duration_seconds:duration,difficulty});
 }
