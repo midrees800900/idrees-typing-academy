@@ -27,3 +27,5 @@
 
 /* Tiny live speed markers above each completed word */
 .prompt-word{position:relative;display:inline-block;padding-top:10px;white-space:pre}.word-speed{position:absolute;top:-1px;left:50%;transform:translateX(-50%);font:700 9px/1 Arial,sans-serif;letter-spacing:0;white-space:nowrap;pointer-events:none}.word-speed::after{content:' wpm';font-size:7px;font-weight:600}.speed-gold{color:#bd8b16;text-shadow:0 0 1px #f4d77a}.speed-red{color:#d63b43;text-shadow:0 0 1px #ffc2c5}
+
+.word-speed{z-index:2;min-width:34px;text-align:center;font-size:9px;line-height:1.1}.word-speed::after{content:' WPM';font-size:6px}.speed-pending{color:#a5a0aa;font-weight:600}
