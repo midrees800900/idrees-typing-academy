@@ -17,3 +17,7 @@
 .prompt{user-select:none}
 .test-panel textarea{transition:border-color .2s,box-shadow .2s}
 @media(max-width:600px){.test-controls label{flex:1 1 42%}.test-controls .btn{width:100%}}
+
+/* Navigation and certificate visibility refinements */
+.topbar nav{align-items:center;gap:clamp(12px,1.7vw,24px)}.topbar nav a{white-space:nowrap}.topbar nav .nav-certify{color:#fff;background:linear-gradient(110deg,#e63f68,#8b35c9);padding:10px 16px;border-radius:999px;box-shadow:0 6px 16px #8b35c92b}.hero-actions{flex-wrap:wrap}.hero-cert-link{display:inline-flex;align-items:center;padding:10px 2px;color:#8b35c9;font-size:13px;font-weight:800;text-decoration:none}.hero-cert-link:hover{text-decoration:underline}.certificate-section{scroll-margin-top:100px}.certificate-showcase{border-radius:24px}
+@media(max-width:1050px){.topbar{height:auto;min-height:76px;flex-wrap:wrap;gap:12px;padding-top:12px;padding-bottom:12px}.topbar nav{order:3;width:100%;overflow-x:auto;padding:4px 0 8px}.topbar nav a{flex:none}.account{margin-left:auto}}
