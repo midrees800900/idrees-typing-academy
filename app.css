@@ -20,7 +20,7 @@
 .hero p,.section-head p,.certificate-banner p{color:var(--text-dim);line-height:1.75;font-size:14px;max-width:530px}
 .hero-actions{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap}
 .hero-proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;font-size:11px;color:#655c70}
-.hero-proof span: first-letter{color:var(--success)}
+.hero-proof span{white-space:nowrap}
 .hero-card{background:#fff;border:1px solid var(--border);border-radius:17px;padding:24px;box-shadow:0 14px 36px #28133c0d;transform:none;max-width:490px;width:100%;justify-self:end}
 .mini-top{display:flex;justify-content:space-between;gap:12px;font-size:9px;font-weight:800;letter-spacing:.75px;color:#81798a}
 .live-dot{color:var(--success)}
