@@ -59,3 +59,29 @@ footer{background:#fff9fd;border-color:#efdef4}
 .help-quick{display:flex;gap:6px;flex-wrap:wrap}.help-quick button{border:1px solid #e7d5ef;background:#fff;border-radius:99px;padding:7px 9px;font-size:10px;color:#8b35a8;cursor:pointer}
 .help-form{display:flex;gap:8px;padding:12px;border-top:1px solid #eee3f3}.help-form input{min-width:0;flex:1;border:1px solid #e4d4ed;border-radius:10px;padding:11px;font-size:12px;outline:none}.help-form input:focus{border-color:#a13bc0}.help-form button{width:40px;border:0;border-radius:10px;background:#9138b7;color:#fff;font-size:18px;cursor:pointer}.help-disclaimer{font-size:9px;color:#998ba2;text-align:center;margin:0 10px 10px}
 @media(max-width:600px){.lesson-scene{padding:10px}.lesson-scene-panel{padding:18px;border-radius:17px}.lesson-scene-prompt{font-size:17px;padding:16px}.lesson-scene-meta{font-size:9px}.help-assistant{right:12px;bottom:12px}.help-toggle{padding:12px 15px}}
+
+/* Refined academy palette: calm ink, muted plum and restrained rose */
+:root{--bg:#f8f8fb;--surface:#fff;--text:#252337;--text-dim:#747286;--brand:#76508f;--on-brand:#fff;--border:#e8e5ee;--danger:#bd5368}
+body{background:linear-gradient(180deg,#fbfafc 0,#f7f6fa 48%,#fff 100%);color:#282638}
+.topbar{background:rgba(255,255,255,.94);border-bottom-color:#e9e6ed;box-shadow:0 5px 22px #29213b08}
+.logo{background:linear-gradient(140deg,#865d9e,#654477);box-shadow:0 5px 14px #65447724}
+.btn{background:linear-gradient(110deg,#81558f,#694879);box-shadow:0 6px 16px #68477925}
+.btn:hover{background:linear-gradient(110deg,#754984,#5d3d70)}
+.btn.ghost{color:#704b83;border-color:#ded4e6}
+.hero{background:radial-gradient(ellipse at 85% 12%,#eee5f3 0,transparent 43%),radial-gradient(ellipse at 8% 95%,#f8e9ed 0,transparent 38%),linear-gradient(125deg,#fcfafc,#f5f2f8)}
+.eyebrow{color:#875b91}.hero h1 em{background:linear-gradient(100deg,#bd687d,#79538e);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-card{border-color:#e7dfe9;box-shadow:0 20px 55px #45334f12}.keyboard{background:linear-gradient(135deg,#f8f0f2,#f0eaf4);color:#765b83}
+.stats{background:#fff;border-color:#ebe8ef}.stats b,.stat-row strong{color:#79558c}
+.pill{color:#79558c;background:#f0eaf4}.lesson .num{background:#f3edf5;color:#80578e}.lesson button{color:#855b91}
+.test-section{background:linear-gradient(135deg,#f8f2f5,#f3eff7)}.test-panel{border-color:#e6e0e9;box-shadow:0 14px 38px #43314d0b}.test-meta{background:linear-gradient(100deg,#80556f,#695080)}
+.games-section{background:linear-gradient(130deg,#faf3f5,#f5f1f8)}.game-card{background:linear-gradient(125deg,#332b40,#51405f 60%,#665078);box-shadow:0 18px 42px #33233f20}
+.level-card,.dash-card,.lesson{border-color:#e9e5ed;box-shadow:0 8px 24px #30243b08}
+.certificate-banner{background:linear-gradient(115deg,#92566b,#725184 62%,#59466f);box-shadow:0 16px 40px #4b34551c}
+.certificate-showcase{background:linear-gradient(125deg,#fbf3f5,#f5f0f8);border-color:#e9e0eb}
+.contact-section{background:#f7f3f8;border-color:#e8e1eb}
+/* Scroll reveal */
+.scroll-reveal{opacity:1;transform:none}.motion-ready .scroll-reveal{opacity:0;transform:translate3d(0,22px,0) scale(.985);transition:opacity .65s ease,transform .7s cubic-bezier(.2,.75,.25,1);transition-delay:var(--reveal-delay,0ms)}.motion-ready .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(1)}
+.depth-card{transform-style:preserve-3d;will-change:transform;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}.depth-card:hover{transform:perspective(900px) translate3d(0,-5px,0) rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg));box-shadow:0 18px 36px #34233f18;border-color:#d9cadd}
+.page-progress{position:fixed;z-index:2000;left:0;top:0;height:3px;width:var(--page-progress,0%);background:linear-gradient(90deg,#bd687d,#79538e);box-shadow:0 1px 6px #79538e44;pointer-events:none;transition:width .08s linear}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready .scroll-reveal{opacity:1;transform:none;transition:none}.depth-card,.depth-card:hover{transform:none;transition:none}}
+@media(max-width:700px){.depth-card:hover{transform:translateY(-2px)}}
