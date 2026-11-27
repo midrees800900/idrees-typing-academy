@@ -29,3 +29,14 @@ footer{background:#fff9fd;border-color:#efdef4}
 @media(max-width:800px){.level-grid{grid-template-columns:repeat(2,1fr)}.game-card,.certificate-showcase{grid-template-columns:1fr}}
 @media(max-width:520px){.level-grid{grid-template-columns:1fr 1fr}.level-card{padding:15px}.game-card,.certificate-showcase{padding:20px}.certificate-showcase h2{font-size:26px}}
 @media print{.certificate-preview{box-shadow:none}}
+
+/* Refined brand system */
+:root{color-scheme:light;--brand:#9b35c7;--brand-red:#e63f68;--focus:#a13bc0}
+::selection{background:#f4d7ff;color:#351246}
+body{min-height:100vh}
+.topbar nav a{transition:color .18s ease}
+.topbar nav a:hover{color:#a12fc3}
+.hero-card{transform:translateZ(0)}
+.stats{box-shadow:0 8px 28px #4d176208}
+.level-card,.lesson,.dash-card,.test-panel,.certificate-showcase{transition:box-shadow .2s ease,border-color .2s ease}
+.level-card:hover,.lesson:hover,.dash-card:hover{border-color:#d7b5e9}
