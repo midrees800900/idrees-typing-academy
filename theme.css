@@ -29,3 +29,15 @@ footer{background:#fff9fd;border-color:#efdef4}
 @media(max-width:800px){.level-grid{grid-template-columns:repeat(2,1fr)}.game-card,.certificate-showcase{grid-template-columns:1fr}}
 @media(max-width:520px){.level-grid{grid-template-columns:1fr 1fr}.level-card{padding:15px}.game-card,.certificate-showcase{padding:20px}.certificate-showcase h2{font-size:26px}}
 @media print{.certificate-preview{box-shadow:none}}
+
+/* Multi-mode typing game studio */
+.game-library{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 20px}
+.game-choice{display:flex;align-items:center;gap:13px;text-align:left;background:#fff;border:1px solid #eadcf5;border-radius:16px;padding:17px;cursor:pointer;color:#321443;transition:.18s ease;min-width:0}
+.game-choice:hover,.game-choice.active{border-color:#a34ac2;box-shadow:0 8px 24px #74318f16;transform:translateY(-2px)}
+.game-choice.active{background:linear-gradient(130deg,#fff7fa,#f8f0ff)}
+.game-choice-icon{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:13px;background:#f7e8f3;color:#9639a8;font-size:22px}
+.game-choice strong,.game-choice small{display:block}.game-choice strong{font-size:14px}.game-choice small{font-size:11px;line-height:1.45;color:#806f8d;margin-top:4px}.game-choice>b{margin-left:auto;white-space:nowrap;font-size:10px;color:#a13db7}
+.game-studio{grid-template-columns:.95fr 1.05fr;align-items:stretch}.game-level-heading{display:flex;flex-direction:column;gap:5px;margin-top:24px}.game-level-heading strong{font-size:13px}.game-level-heading span{font-size:10px;color:#e5cce9}
+.game-levels{display:flex;gap:8px;margin-top:12px}.game-level{width:37px;height:37px;border-radius:10px;border:1px solid #8d5b9c;background:#48205d;color:white;font-weight:800;cursor:pointer}.game-level.selected{background:#fff;color:#8b35c9;border-color:#fff;box-shadow:0 0 0 3px #d78ae855}.game-level:disabled{opacity:.38;cursor:not-allowed}.game-level span{font-size:9px}
+.game-play-top{display:flex;justify-content:space-between;width:100%;font-size:10px;font-weight:800;letter-spacing:.8px;color:#806f8d;margin-bottom:20px}.game-prompt-help{font-size:12px;color:#806f8d;text-align:center;margin:0 0 16px}.game-play input{min-height:50px}.game-play-actions{display:flex;gap:10px;width:100%}.game-play-actions .btn{flex:1}.game-play-actions .btn.ghost{margin-top:12px;width:auto}.game-progress-track{width:100%;height:7px;border-radius:99px;background:#f0e5f4;margin-top:22px;overflow:hidden}.game-progress-track span{display:block;width:0;height:100%;border-radius:99px;background:linear-gradient(90deg,#e63f68,#8b35c9);transition:width .2s}.game-play-note{font-size:10px;color:#998ba2;text-align:center;margin:12px 0 0}.game-studio .game-message{min-height:52px}
+@media(max-width:760px){.game-library{grid-template-columns:1fr}.game-studio{grid-template-columns:1fr}.game-choice{padding:13px}.game-level-heading{margin-top:18px}}
